@@ -1,0 +1,40 @@
+
+
+{% extends 'blog/base.html' %}
+
+{% block title %}
+	Responsive Page
+{% endblock %}
+
+{% block body %}
+	<div class="row mt-3">
+        <div class="col-md-6">
+            <h2 class="bg-white text-center">About Python</h2>
+            <div class="bg-danger text-white p-3">
+                <p>1. Python is Simple language</p>
+                <p>2. Python is Easy language</p>
+                <p>3. Python is Dynamic language</p>
+            </div>
+        </div> <!-- column-1 closed -->
+        <div class="col-md-6">
+            <h2 class="bg-white text-center">About Django</h2>
+            <div class="bg-danger text-white p-3">
+                <p>1. Django is a framework </p>
+                <p>2. Django is used to develop web apps</p>
+                <p>3. Django contains more modules</p>
+            </div>
+        </div> <!-- column-2 closed -->
+    </div> <!-- row-1 closed -->
+    
+    <div class="row mt-3">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2 class="bg-white text-center">About MySQL</h2>
+            <div class="bg-danger text-white p-3">
+                <p>1. MySQL is a Database</p>
+                <p>2. MySQL is used by top companies</p>
+                <p>3. MySQL follows RDBMS concepts</p>
+            </div>
+        </div> <!-- column-1 closed -->
+    </div> <!-- row-1 closed -->
+{% endblock %}

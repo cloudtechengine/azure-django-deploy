@@ -1,0 +1,32 @@
+
+{% extends 'blog/base.html' %}
+
+{% block title %}
+	Latest Posts
+{% endblock %}
+
+{% block body %}
+	{% if posts %}
+       {% for post in posts %}
+       	  <article class="media content-section">
+              <img src="{{ post.author.profile.image.url }}" class="img-fluid rounded-circle"
+                style="width: 75px;height: 75px;">
+
+                 <div class="article-metadata mb-2 ms-4" style="display: inline-block">
+                     <a class="me-3 article-author" href="{% url 'user_post_list' post.author.username %}">{{ post.author }}</a>
+                     <small class="text-danger">{{ post.date_posted }}</small>
+                 </div>
+
+             <div class="media-body">
+                     <h2>
+                         <a class="article-title" href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                     </h2>
+                     <p class="article-content">{{ post.content }}</p>
+             </div>
+          </article>
+       {% endfor %}
+
+    {% else %}
+        <h1>Posts are not available</h1>
+    {% endif %}
+{% endblock %}

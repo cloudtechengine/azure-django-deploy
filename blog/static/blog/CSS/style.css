@@ -1,0 +1,63 @@
+body{
+    background-color: greenyellow;
+    margin-top: 60px;
+}
+
+body:last-child{
+    margin-bottom: 100px;
+}
+
+.content-section, .content-section2{
+    border: 5px solid coral;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.content-section2{
+    max-height: 300px;
+}
+
+.article-title{
+    color: red;
+    font-size: 30px;
+    text-decoration: none;
+}
+.article-content{
+    color: blue;
+    font-family: Consolas;
+}
+
+.article-metadata{
+    border-bottom: 5px solid chartreuse;
+    padding-bottom: 10px;
+}
+
+
+#id_footer{
+    background-color: #325f32;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Styling for the text-based logo */
+.navbar-brand.text-logo {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-left: 10px; /* Add margin to the left to create spacing */
+    line-height: 40px; /* Match the line height to the height of the image logo */
+    color: #CCCCCC; /* Set the color to white or your desired color */
+    text-decoration: none; /* Remove underlines */
+}
+.navbar-brand.text-logo:hover {
+    color: white;
+    text-decoration: underline;
+    background-color: darkgreen;
+}
+
