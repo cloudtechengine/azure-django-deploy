@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-settings_module = 'ArticleProject.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'AzureProject.settings'
+settings_module = 'ArticleProject.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'ArticleProject.settings'
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
