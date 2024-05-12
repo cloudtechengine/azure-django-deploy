@@ -13,14 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
-# Get the base directory of your Django project
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Define the paths to your certificates
-# CERTIFICATE_ROOT_CA_2017 = os.path.join(BASE_DIR, 'certificates', 'Microsoft RSA Root Certificate Authority 2017.pem')
-# CERTIFICATE_ECC_CA_2017 = os.path.join(BASE_DIR, 'certificates', 'Microsoft ECC Root Certificate Authority 2017.pem')
-# CERTIFICATE_DIGICERT_GLOBAL_ROOT_CA = os.path.join(BASE_DIR, 'certificates', 'DigiCertGlobalRootCA.pem')
-
+import ArticleProject
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,18 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.getenv('SECRET_KEY')
+
 SECRET_KEY = 'django-insecure-qd@6znin@+t8t6g2*dd16$w#la9x3&otlz%yv-x+(go3k6m7zo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = os.getenv('DEBUG')
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-# ALLOWED_HOSTS = [
-#     os.getenv('ALLOWED_HOSTS')
-#     ]
 
 # Application definition
 
@@ -72,7 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ArticleProject.urls'
+ROOT_URLCONF = "ArticleProject.urls"
 
 TEMPLATES = [
     {
@@ -105,68 +94,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'dbarticle',
-#         'USER': 'django_user',
-#         'PASSWORD': 'admin123',
-#         'HOST': '127.0.0.1',  # 73.110.238.26
-#         'PORT': '3306',  # MySQL default port
-#     }
-# }
-
-# DATABASES = {
-#      'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.getenv('DATABASE_NAME'),
-#         'USER': os.getenv('DATABASE_USER'),
-#         'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-#         'HOST': os.getenv('DATABASE_HOST'),
-#         'PORT': os.getenv('DATABASE_PORT'),
-#         'OPTIONS': {
-#              'ssl': {
-#                  'ssl-ca': [
-#                      ' ./Microsoft ECC Root Certificate Authority 2017.pem',
-#                      ' ./Microsoft RSA Root Certificate Authority 2017.pem',
-#                      ' ./DigiCertGlobalRootCA.pem',
-#                  ]
-#              }
-#          }
-#      }
-# }
-
-
-# settings.py
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'article_db',  # Database name
-#         'username': 'django_user',  # MySQL username
-#         'PASSWORD': 'Admin123',  # MySQL password
-#         'hostname': 'article.mysql.database.azure.com',  # Hostname for Azure MySQL
-#         'PORT': '3306',  # Default MySQL port
-#         'OPTIONS': {
-#             'ssl': {
-#                 'ca': [
-#                     CERTIFICATE_ROOT_CA_2017,  # Path to Microsoft RSA Root Certificate Authority 2017.pem
-#                     CERTIFICATE_ECC_CA_2017,   # Path to Microsoft ECC Root Certificate Authority 2017.pem
-#                     CERTIFICATE_DIGICERT_GLOBAL_ROOT_CA,  # Path to DigiCertGlobalRootCA.pem
-#                      ]
-#             }
-#         }
-#     }
-# }
-
-
-
-
-
 
 
 # Password validation
