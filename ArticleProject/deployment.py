@@ -1,6 +1,7 @@
 import os
 from .settings import *
 from .settings import BASE_DIR
+# from django.conf import settings
 
 
 SECRET_KEY = os.environ['SECRET']
@@ -21,8 +22,8 @@ MIDDLEWARE = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = "/var/www/example.com/static/"
 # Ref: https://learn.microsoft.com/en-us/azure/service-connector/how-to-integrate-postgres?tabs=dotnet
 conn_str = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
 conn_str_params = {pair.split('=')[0]: pair.split('=')[1] for pair in conn_str.split(' ')}

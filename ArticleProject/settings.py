@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os.path
 from pathlib import Path
+# from django.conf import settings
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -137,8 +139,8 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('blog/static')),)
 
-
-STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
+STATIC_ROOT = "/var/www/example.com/static/"
+# STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
 
 MEDIA_URL = '/media/'
 
