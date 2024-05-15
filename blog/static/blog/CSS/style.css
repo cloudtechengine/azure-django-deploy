@@ -47,6 +47,14 @@ body:last-child{
     left: 0;
 }
 
+/* Styling for the text-based logo */
+.navbar-brand.text-logo {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-left: 10px; /* Add margin to the left to create spacing */
+    line-height: 40px; /* Match the line height to the height of the image logo */
+    color: #CCCCCC; /* Set the color to white or your desired color */
+    text-decoration: none; /* Remove underlines */
+}
 
 .navbar-brand.text-logo:hover {
     color: white;
