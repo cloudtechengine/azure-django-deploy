@@ -71,8 +71,7 @@ ROOT_URLCONF = "ArticleProject.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [str(BASE_DIR / 'templates')],  # Convert Path object to string
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
