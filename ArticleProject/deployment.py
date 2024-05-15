@@ -5,7 +5,8 @@ from .settings import BASE_DIR
 
 
 SECRET_KEY = os.environ['SECRET']
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+# ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'], '.itservices.today']
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
 DEBUG = True
 
@@ -22,7 +23,7 @@ MIDDLEWARE = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR / 'static')
+STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
 # STATIC_ROOT = "/var/www/example.com/static/"
 # Ref: https://learn.microsoft.com/en-us/azure/service-connector/how-to-integrate-postgres?tabs=dotnet
 conn_str = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
